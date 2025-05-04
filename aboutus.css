@@ -43,25 +43,17 @@
         }
         .about{
             display: flex;
-            justify-content: space-between;
             align-items: center;
-            flex-wrap: wrap;
-            
         }
             .about-image{
             flex:1;
-            margin-right: 40px;
-            overflow: hidden;
-            
+            margin-right: 40px;       
         }
             .about-image img{
                 max-width: 100%;
                 height: auto;
-                display: block;
                 transition: 0.5s ease;
                 border-radius: 20px;
-                
-               
             }
                 .about-content{
                 flex:1;
