@@ -21,9 +21,7 @@
     .heading h1{
         font-size: 50px;
         color:#000;
-        margin-bottom: 25px;
-        position: relative;
-        
+        margin-bottom: 25px;      
     }
         .heading h1::after{
         content:"";
