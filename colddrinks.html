@@ -14,31 +14,27 @@
       <div class="drink-item">
         <img src="ice cofe.jpeg" alt="Iced Coffee">
         <h3>Iced Coffee</h3>
-        <p>Chilled espresso with milk and ice.</p>
+        <p>One shot Chilled espresso with milk and ice.</p>
         <span>$3.50</span>
       </div>
-
       <div class="drink-item">
         <img src="mango.jpg" alt="Mango Juice">
         <h3>Mango Juice</h3>
         <p>Fresh mango blended with ice and a splash of honey.</p>
         <span>$4.00</span>
       </div>
-
       <div class="drink-item">
         <img src="frape.jpeg" alt="Frappuccino">
         <h3>Frappuccino</h3>
-        <p>Blended iced coffee with whipped cream.</p>
+        <p>Blended iced coffee with whipped cream and two shots of espresso</p>
         <span>$4.75</span>
       </div>
-
       <div class="drink-item">
         <img src="lemon.jpeg" alt="Lemonade">
         <h3>Lemonade</h3>
-        <p>Fresh-squeezed lemonade served cold.</p>
+        <p>Fresh-squeezed lemonade served cold with mint</p>
         <span>$2.50</span>
       </div>
-
       <div class="drink-item">
         <img src="frawla.jpg" alt="stawberry">
         <h3>stawberry</h3>
@@ -52,13 +48,6 @@
         <span>$5.50</span>
       </div>
       <div class="drink-item">
-        <img src="cola.jpeg" alt="cola">
-        <h3>cola</h3>
-        <p>some cola with some cold</p>
-        <span>$3.50</span>
-      </div>
-      
-      <div class="drink-item">
         <img src="soda.jpg" alt="soda">
         <h3>soda</h3>
         <p>some soda with some cold</p>
@@ -71,27 +60,21 @@
         <span>$1.50</span>
       </div>
       <div class="drink-item">
-        <img src="mokheto.jpeg" alt="mokheto">
-        <h3>mokheto</h3>
-        <p>some mokheto with soda and cold</p>
-        <span>$1.50</span>
-      </div>
-      <div class="drink-item">
         <img src="choclate.jpeg" alt="ice choclate">
         <h3>ice choclate</h3>
-        <p>some coffee with some cold</p>
+        <p>one bar of choclate with some milk and some cubes of cold</p>
         <span>$2.50</span>
       </div>
       <div class="drink-item">
         <img src="late.jpg" alt="vanila latte">
         <h3>vanila latte</h3>
-        <p>some coffee with some cold</p>
+        <p>one shot espresso with some milk and some cold</p>
         <span>$3.50</span>
       </div>
       <div class="drink-item">
         <img src="mocha.jpeg" alt="iced mocha">
         <h3>iced mocha</h3>
-        <p>some coffee with some cold</p>
+        <p>two shot espresso and mocha powder and one shot syrup and milk with some cold</p>
         <span>$4.50</span>
       </div>
       <div class="drink-item">
@@ -100,13 +83,28 @@
         <p>stawberry,mango.choclate.vanila</p>
         <span>$5.50</span>
       </div>
-      <div class="drink-item">
-        <img src="blueberry.jpg" alt="blueberry">
-        <h3>blueberry</h3>
-        <p>blueberry-squeezed  served cold</p>
-        <span>$3.50</span>
-      </div>
     </div>
   </section>
+
+    <video autoplay muted loop id="background-video">
+      <source src="vedio.mp4" type="video/mp4">
+  </video>
+  
+  <div class="search-container">
+    <input type="text" placeholder="Search for drinks..." class="search-bar">
+  </div>
+  <div class="search-container">
+    <input type="text" id="search" placeholder="Search for drinks..." class="search-bar">
+  </div>
+
+  <script>
+    document.getElementById('search').addEventListener('input', function() {
+      const query = this.value.toLowerCase();
+      document.querySelectorAll('.drink-item').forEach(item => {
+        const name = item.querySelector('h3').textContent.toLowerCase();
+        item.style.display = name.includes(query) ? 'block' : 'none';
+      });
+    });
+    </script>
 </body>
 </html>
