@@ -1,0 +1,186 @@
+/* تنسيق عام للصفحة */
+body {
+  font-family: Arial, sans-serif; /* تحديد نوع الخط */
+  margin: 0; /* إزالة الهامش الخارجي */
+  padding: 0; /* إزالة الحشو الداخلي */
+  background-color: #d3bdaa; /* لون الخلفية الأساسي */
+  color: #333; /* لون النص */
+}
+/* تنسيق قسم التخصصات */
+.Specialties {
+  font-family: sans-serif; /* تحديد نوع الخط */
+  background: #d3bdaa; /* لون الخلفية */
+  text-align: center; /* توسيط النص */
+  padding: 20px; /* مساحة داخلية حول المحتوى */
+}
+
+/* تنسيق السلايدر */
+.slider {
+  width: 100%; /* عرض السلايدر 80% من الصفحة */
+  margin: auto; /* توسيطه في المنتصف */
+  overflow: hidden; /* إخفاء الأجزاء الزائدة من الشرائح */
+  border-radius: 15px; /* زوايا دائرية */
+  box-shadow: 0 0 10px rgba(210, 93, 93, 0.2); /* ظل خفيف حول السلايدر */
+  position: relative; /* لاستخدام عناصر مطلقة بداخله */
+}
+
+/* الشرائح الداخلية */
+.slides {
+  display: flex; /* ترتيب الشرائح بجانب بعضها */
+  width: 300px; /* العرض الكلي */
+  transition: transform 0.5s ease-in-out; /* انتقال ناعم عند تحريك الشرائح */
+}
+
+/* كل شريحة فردية */
+.slide {
+  width: 100%; /* عرض الشريحة أكثر من 100% (قد يكون غير معتاد) */
+  flex: 0; /* لا تسمح بتقلص العنصر */
+}
+
+/* صورة داخل كل شريحة */
+.slide img {
+  width: 100%; /* تأخذ الصورة كامل عرض الشريحة */
+  height: auto; /* الطول تلقائي حسب العرض */
+  display: block; /* إزالة الفراغات أسفل الصورة */
+}
+
+/* قسم أزرار التحكم */
+.controls {
+  margin-top: 10px; /* مسافة من الأعلى */
+}
+/* زر التحكم */
+button {
+  padding: 10px 20px; /* الحشو الداخلي */
+  margin: 5px; /* مسافة حول الزر */
+  border: none; /* إزالة الحدود */
+  background-color: #b45d76; /* لون خلفية الزر */
+  color: white; /* لون النص */
+  cursor: pointer; /* مؤشر يد عند التمرير */
+  border-radius: 5px; /* زوايا دائرية */
+}
+
+/* عند تمرير المؤشر على الزر */
+button:hover {
+  background-color: #5c3310; /* تغيير لون الخلفية */
+}
+
+/* حاوية منتجات الدونات */
+.donuts-container {
+  display: grid; /* استخدام شبكة */
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* أعمدة متجاوبة */
+  gap: 1.5rem; /* مسافة بين العناصر */
+  margin: 2rem; /* هامش خارجي */
+}
+
+/* نص متحرك أو عنوان */
+.text {
+  text-align: center; /* توسيط النص */
+}
+
+/* حاوية الكرواسون مثل الدونات */
+.croissants-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem;
+}
+
+/* صندوق كل منتج */
+.box {
+  background: #d9a4ac; /* لون الخلفية */
+  border-radius: 10px; /* زوايا دائرية */
+  padding: 1rem; /* حشو داخلي */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* ظل خفيف */
+  text-align: center; /* توسيط المحتوى */
+  position: relative; /* يسمح بوضع عناصر داخله بوضع مطلق */
+}
+
+/* صورة المنتج داخل الصندوق */
+.box img {
+  width: 60%; /* عرض الصورة 60% من الصندوق */
+  height: 200px; /* ارتفاع ثابت */
+  object-fit: cover; /* تغطية الصورة للمساحة دون تشويه */
+  border-radius: 10px; /* زوايا دائرية */
+}
+
+/* اسم المنتج */
+.box h3 {
+  margin: 1rem 0 0.5rem; /* مسافات حول العنوان */
+  font-size: 1.1rem; /* حجم الخط */
+  color: #333; /* لون النص */
+}
+
+/* قسم السعر + زر الطلب */
+.box .content {
+  display: flex; /* ترتيب العناصر بجانب بعض */
+  justify-content: space-between; /* توزيع المسافة */
+  align-items: center; /* محاذاة عمودية */
+  margin-top: 0.5rem; /* مسافة علوية */
+}
+
+/* السعر */
+.box .content span {
+  font-weight: bold; /* نص عريض */
+  color: #e91e63; /* لون وردي */
+}
+
+/* زر "أضف إلى السلة" */
+.box .content a {
+  padding: 0.4rem 0.8rem; /* حشو داخلي */
+  background: #e91e63; /* لون الخلفية */
+  color: #fff; /* لون النص */
+  border-radius: 5px; /* زوايا دائرية */
+  text-decoration: none; /* إزالة الخط تحت الرابط */
+  font-size: 0.9rem; /* حجم الخط */
+}
+
+/* أيقونة القلب - المفضلة */
+.favorite-icon {
+  font-size: 1.5rem; /* حجم الأيقونة */
+  color: #ccc; /* لون رمادي افتراضي */
+  cursor: pointer; /* مؤشر يد */
+  transition: color 0.3s; /* انتقال ناعم للون */
+  margin-top: 10px; /* مسافة من الأعلى */
+  display: inline-block; /* عرض ضمن السطر */
+}
+
+/* القلب عندما يكون نشط (مفضل) */
+.favorite-icon.active {
+  color: red; /* لون أحمر */
+}
+
+/* حاوية النص المتحرك */
+.typing-container {
+  font-family: 'Courier New', monospace; /* خط آلة كاتبة */
+  font-size: 2rem; /* حجم الخط */
+  color: #fff; /* لون النص */
+  background: linear-gradient(135deg, #ff6ec4, #7d97c0); /* تدرج لوني للخلفية */
+  padding: 20px 30px; /* حشو داخلي */
+  border-radius: 15px; /* زوايا دائرية */
+  display: inline-block; /* عرض بمقاس المحتوى */
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2); /* ظل كبير */
+  overflow: hidden; /* إخفاء الزائد */
+  border-left: 5px solid #fff; /* خط أبيض على اليسار */
+  animation: slide-in 1s ease forwards; /* تنفيذ حركة دخول */
+  margin: 20px; /* هامش خارجي */
+}
+
+/* حركة الدخول للنص */
+@keyframes slide-in {
+  from {
+    transform: translateX(-50%); /* البداية من خارج اليسار */
+    opacity: 0; /* شفاف */
+  }
+  to {
+    transform: translateX(0); /* في مكانه الطبيعي */
+    opacity: 1; /* مرئي بالكامل */
+  }
+}
+
+/* تأثير الكتابة – المؤشر */
+.typing-text::after {
+  content: '|'; /* إضافة المؤشر */
+  animation: blink 0.7s infinite; /* وميض متكرر */
+  color: #fff; /* لون أبيض */
+  margin-left: 5px; /* مسافة من النص */
+}

@@ -1,0 +1,354 @@
+<!DOCTYPE html> <!-- إعلان نوع المستند HTML5 -->
+<html lang="en"> <!-- بداية الصفحة وتحديد اللغة الإنجليزية -->
+
+<head> <!-- قسم الرأس، يحتوي على البيانات التعريفية والروابط -->
+    <meta charset="UTF-8"> <!-- تحديد ترميز الأحرف ليكون UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- لضبط عرض الصفحة على أجهزة الجوال -->
+    <link rel="stylesheet" href="donuts and croissants.css"> <!-- ربط ملف CSS الخاص بتنسيق الصفحة -->
+    <title>donuts and croissants section</title> <!-- عنوان الصفحة الذي يظهر في تبويب المتصفح -->
+    <script src="donuts and croissants.js"></script>
+</head>
+
+<body> <!-- بداية جسم الصفحة -->
+
+    <div class="Specialties"> <!-- قسم خاص بالتخصصات أو العروض -->
+        <h2>Our Specialties</h2> <!-- عنوان القسم -->
+
+        <div class="slider"> <!-- حاوية للسلايدر (الصور المتحركة) -->
+            <div class="slides" id="slides"> <!-- عنصر يحتوي على كل الشرائح -->
+                <div class="slide"><img src="Giant Donut Cake.jpg" alt=""></div> <!-- صورة لشريحة -->
+                <div class="slide"><img src="Maple Glazed Donuts [1_5 Hours].jpg" alt=""></div>
+                <div class="slide"><img src="choclate donuts.jpg" alt=""></div>
+                <div class="slide"><img src="Pistachio Rosewater Doughnut.jpg" alt=""></div>
+                <div class="slide"><img src=" Ice Cream Croissant Delight.jpg" alt=""></div>
+                <div class="slide"><img src="Chocolate Croissants (Zebra Croissants) _ Bake to the roots.jpg" alt=""></div>
+                <div class="slide"><img src="Croissant at Cannelé.jpg" alt=""></div>
+                <div class="slide"><img src="Cookie Croissant (Le Crookies)- A Paris Viral Recipe.jpg" alt=""></div>
+            </div>
+        </div>
+
+        <div class="controls"> <!-- أزرار التحكم بالتنقل بين الصور -->
+            <button onclick="prev()">Prev</button> <!-- زر السابق -->
+            <button onclick="next()">Next</button> <!-- زر التالي -->
+        </div>
+
+        <script> <!-- كود جافاسكربت لتحريك السلايدر -->
+            let index = 0; // تعريف مؤشر الشريحة الحالية
+            const slides = document.getElementById('slides'); // الحصول على عنصر الشرائح
+            const totalSlides = slides.children.length; // حساب عدد الشرائح
+
+            function showSlide(i) {
+                index = (i + totalSlides) % totalSlides; // التأكد من عدم الخروج عن عدد الشرائح
+                slides.style.transform = 'translateX(' + (-index * 100) + '%)'; // تحريك الشرائح
+            }
+
+            function next() {
+                showSlide(index + 1); // الانتقال إلى الشريحة التالية
+            }
+
+            function prev() {
+                showSlide(index - 1); // الرجوع إلى الشريحة السابقة
+            }
+        </script>
+    </div>
+
+   <!-- قسم الكورنر الخاص بالدونات -->
+   <section class="donuts" id="donuts">
+    <div class="text">
+        <p>CORNER OF DONUTS</p> <!-- عنوان تزييني -->
+    </div>
+    <div class="donuts-container"> <!-- حاوية لكل منتجات الدونات -->
+        
+        <!-- عنصر دونات فردي -->
+        <div class="box">
+            <img src="Pistachio Rosewater Doughnut.jpg" alt=""> <!-- صورة المنتج -->
+            <div class="favorite-icon">❤️</div> <!-- زر الإعجاب -->
+            <h3>pistachio donuts</h3> <!-- اسم المنتج -->
+            <div class="content">
+                <span>$30</span> <!-- السعر -->
+                <a href="#">Add to cart</a> <!-- زر الإضافة للسلة -->
+            </div>
+        </div>
+
+        <!-- يتم تكرار نفس الهيكل لكل منتج دونات -->
+        <!-- يمكنك متابعة نسخ الكتل المتشابهة التي تم شرحها أعلاه -->
+
+            <div class="box">
+ 
+                <img src="choclate donuts.jpg" alt="">
+                <div class="favorite-icon">❤️</div>
+                <h3>choclate donuts</h3>
+                <div class="content">
+                    <span>$20</span>
+                    <a href="#">Add to cart</a>
+                    
+                </div>
+            </div>
+    
+            <div class="box">
+                <img src="choclate donut 2.jpg" alt="">
+                <div class="favorite-icon">❤️</div>
+                <h3>choclate donuts with cracker</h3>
+                <div class="content">
+                    <span>$25</span>
+                    <a href="#">Add to cart</a>
+                                   
+
+                </div>
+            </div>
+    
+            <div class="box">
+                <img src="lotus biscoff donut.jpg" alt="">
+                <div class="favorite-icon">❤️</div>
+                <h3>lotus biscoff donut</h3>
+                <div class="content">
+                    <span>$45</span>
+                    <a href="#">Add to cart</a>
+                    
+                </div>
+            </div>
+            <div class="box">
+                <img src="Giant Donut Cake.jpg" alt="">
+                <div class="favorite-icon">❤️</div>
+                <h3>Giant Donut Cake</h3>
+                <div class="content">
+                    <span>$50</span>
+                    <a href="#">Add to cart</a>
+                   
+                </div>
+            </div>
+    
+            <div class="box">
+                <img src="Maple Glazed Donuts [1_5 Hours].jpg" alt="">
+                <div class="favorite-icon">❤️</div>
+                <h3>strawberry donuts</h3>
+                <div class="content">
+                    <span>$40</span>
+                    <a href="#">Add to cart</a>
+                    
+                </div>
+            </div>
+            <div class="box">
+                <img src="strawberry donuts.jpg" alt="">
+                <div class="favorite-icon">❤️</div>
+                <h3>Maple Glazed Donuts</h3>
+                <div class="content">
+                    <span>$80</span>
+                    <a href="#">Add to cart</a>
+                   
+                </div>
+            </div>
+            <div class="box">
+                <img src="Oreo Cookies and Cream Donuts - Baker by Nature.jpg" alt="">
+                <div class="favorite-icon">❤️</div>
+                <h3>Oreo Cookies and Cream Donuts</h3>
+                <div class="content">
+                    <span>$75</span>
+                    <a href="#">Add to cart</a>
+                    
+                </div>
+            </div>
+            <div class="box">
+                <img src="Vanilla Bean Cake Donuts with Blueberry Glaze.jpg" alt="">
+                <div class="favorite-icon">❤️</div>
+                <h3>Vanilla Bean Cake Donuts with Blueberry Glaze </h3>
+                <div class="content">
+                    <span>$90</span>
+                    <a href="#">Add to cart</a>
+                </div>
+            </div>
+            <div class="box">
+                <img src="Pistachio Rosewater Doughnut.jpg" alt="">
+                <div class="favorite-icon">❤️</div>
+                <h3>Pistachio Rosewater Doughnut </h3>
+                <div class="content">
+                    <span>$100</span>
+                    <a href="#">Add to cart</a>
+                   
+                </div>
+            </div>
+            <div class="box">
+                <img src="Boston Cream Doughnuts - Baker by Nature.jpg" alt="">
+                <div class="favorite-icon">❤️</div>
+                <h3>Boston Cream Doughnuts</h3>
+                <div class="content">
+                    <span>$55</span>
+                    <a href="#">Add to cart</a>
+                    
+                </div>
+            </div>
+            <div class="box">
+                <img src="Chocolate Blackout Doughnuts.jpg" alt="">
+                <div class="favorite-icon">❤️</div>
+                <h3>Chocolate Blackout Doughnuts </h3>
+                <div class="content">
+                    <span>$44</span>
+                    <a href="#">Add to cart</a>
+                    
+                </div>
+            </div>
+            <div class="box">
+                <img src="Baked Churro Donuts.jpg" alt="">
+                <div class="favorite-icon">❤️</div>
+                <h3>Baked Churro Donuts  </h3>
+                <div class="content">
+                    <span>$55</span>
+                    <a href="#">Add to cart</a>
+                    
+                </div>
+            </div>
+            <div class="box">
+                
+               
+                <img src="S'Mores Doughnuts with Chocolate Glaze.jpg" alt="">
+                <div class="favorite-icon">❤️</div>
+                <h3>S'Mores Doughnuts with Chocolate Glaze</h3>
+                <div class="content">
+                    <span>$50</span>
+                    <a href="#">Add to cart</a>
+                
+                </div>
+            </div>
+            <div class="box">
+                
+               
+                <img src="Cloud-like Vanilla Donuts.jpg" alt="">
+                <div class="favorite-icon">❤️</div>
+                <h3>Baked Churro Donuts</h3>
+                <div class="content">
+                    <span>30$</span>
+                    <a href="#">Add to cart</a>
+                    
+                </div>
+            </div>
+            <div class="box">
+                
+               
+                <img src="Simple Homemade Sugar Donuts.jpg" alt="">
+                <div class="favorite-icon">❤️</div>
+                <h3>Simple Homemade Sugar Donuts</h3>
+                <div class="content">
+                    <span>30$</span>
+                    <a href="#">Add to cart</a>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- قسم الكورنر الخاص بالكرواسون -->
+    <section class="croissants" id="croissants">
+        <div class="text">
+            <p>CORNER OF CROISSANTS</p> <!-- عنوان تزييني -->
+        </div>
+        <div class="croissants-container"> <!-- حاوية لكل منتجات الكرواسون -->
+            
+            <!-- عنصر كرواسون فردي -->
+            <div class="box">
+                <img src="Baked Croissant Strawberry Jam On Black Stock Photo 1017239296 _ Shutterstock.jpg" alt="">
+                <div class="favorite-icon">❤️</div>
+                <h3>Baked Croissant Strawberry Jam</h3>
+                <div class="content">
+                    <span>$20</span>
+                    <a href="#">Add to cart</a>
+                </div>
+            </div>
+
+            <!-- يتم تكرار نفس الهيكل لكل منتج كرواسون -->
+
+     
+             <div class="box">
+            
+                <img src="Classic French Croissants 101 Guide.jpg" alt="">
+                <div class="favorite-icon">❤️</div>
+                 <h3>Chocolate Croissants (Zebra Croissants)</h3>
+                 <div class="content">
+                     <span>15$</span>
+                     <a href="#">Add to cart</a>
+                    
+                 </div>
+             </div>
+     
+             <div class="box">
+                 <img src="Classic French Croissants 101 Guide.jpg" alt="">
+                 <div class="favorite-icon">❤️</div>
+                 <h3>Classic French Croissants</h3>
+                 <div class="content">
+                     <span>30$</span>
+                     <a href="#">Add to cart</a>
+                     
+                 </div>
+             </div>
+     
+             <div class="box">
+                 <img src="Cookie Croissant (Le Crookies)- A Paris Viral Recipe.jpg" alt="">
+                 <div class="favorite-icon">❤️</div>
+                 <h3>Cookie Croissant (Le Crookies)</h3>
+                 <div class="content">
+                     <span>45$</span>
+                     <a href="#">Add to cart</a>
+                    
+                 </div>
+             </div>
+             <div class="box">
+                 <img src="Croissant at Cannelé.jpg" alt="">
+                 <div class="favorite-icon">❤️</div>
+                 <h3>Croissant at Cannelé</h3>
+                 <div class="content">
+                     <span>40$</span>
+                     <a href="#">Add to cart</a>
+                     
+                 </div>
+             </div>
+     
+             <div class="box">
+                 <img src="Flaky Pistachio Croissants with a Sweet Filling.jpg" alt="">
+                 <div class="favorite-icon">❤️</div>
+                 <h3>Flaky Pistachio Croissants with a Sweet Filling</h3>
+                 <div class="content">
+                     <span>50$</span>
+                     <a href="#">Add to cart</a>
+                    
+                 </div>
+             </div>
+             <div class="box">
+                 <img src="Recette de la Brioche Feuilletée — maPatisserie_fr.jpg" alt="">
+                 <div class="favorite-icon">❤️</div>
+                 <h3>Recette de la Brioche Feuilletée</h3>
+                 <div class="content">
+                     <span>80$</span>
+                     <a href="#">Add to cart</a>
+                     
+                 </div>
+             </div>
+             <div class="box">
+                 <img src="Ice Cream Croissant Delight.jpg" alt="">
+                 <div class="favorite-icon">❤️</div>
+                 <h3>Ice Cream Croissant Delight</h3>
+                 <div class="content">
+                     <span>75$</span>
+                     <a href="#">Add to cart</a>
+                    
+                 </div>
+             </div>
+         </div>
+     </section>
+
+    <!-- كود لتفعيل زر الإعجاب عند النقر عليه -->
+    <script>
+        document.querySelectorAll('.favorite-icon').forEach(icon => {
+            icon.addEventListener('click', () => {
+                icon.classList.toggle('active'); // تبديل الحالة عند الضغط
+            });
+        });
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
