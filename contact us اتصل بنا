@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="bosy.css">
+</head>
+<body>
+    <div>
+        <h1>Contact Us</h1>
+        </div>
+        <div>
+          <p> " We would love to hear from you! Whether you have a question about our coffee or a suggestion you’d like to share with us."
+         </p>
+     </div>
+        <form method="Post">
+    <div> <label for="name">Name</label>
+            <input id="name" type="text" required></div>
+            
+     <div>   <label for="email">Email</label>
+            <input id="email" type="email" required></div>
+            
+      <div>  <label for="tel">Telephone number</label>
+            <input id="tel" type="telephone number" required ></div>
+            
+      <div>  <textarea name="Message" placeholder="Write your message" rows="5"></textarea></div>
+            
+            <button type="submit">Send</button>
+        </form>
+    </div>
+
+    <div class="map_container">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d55149.80759807112!2d31.282803220898437!3d30.240983800000006!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14586dd8cc41089b%3A0xb38c4d7e689bc478!2z2YPYp9mB2YrYqSDZhNin2KrZitmH!5e0!3m2!1sar!2seg!4v1746365464882!5m2!1sar!2seg" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>></iframe>
+    </div>
+</body>
+</html>
+
+
+---
