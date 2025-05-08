@@ -1,0 +1,104 @@
+<DOCTYPE html!>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Register Page</title>
+        <link rel="stylesheet" href="register.css">
+    </head>
+
+    <body>
+        <nav>
+            <a href="home.html">Home</a>
+            <a href="register.html">Register</a>
+            <a href="login.html">Login</a>
+            <a href="contact.html">Contact Us</a>
+            <a href="products.html">Products</a>
+        </nav>
+        <div class="register-container">
+            <h2>Register</h2>
+            <form id="registerForm" onsubmit="return validateRegister()">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+                <span class="error" id="usernameError"></span>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <span class="error" id="emailError"></span>
+
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+                <span class="error" id="password"></span>
+
+                <label for="confirmPassword">Confirm Password:</label>
+                <input type="password" id="confirmPassword" name="confirmPassword" required>
+                <span class="error" id="confirmPasswordError"></span>
+
+                <button type="reset" id="res">Reset</button>
+
+                <button type="submit" id="reg">Register</button>
+
+            </form>
+
+        </div>
+        <script>
+
+
+            function validateRegister() {
+                const usernameError = document.getElementById("usernameError");
+                const emailError = document.getElementById("emailError");
+                const passwordError = document.getElementById("passwordError");
+                const confirmPasswordError = document.getElementById("confirmPasswordError");
+                const username = document.getElementById("username").value.trim();
+                const email = document.getElementById("email").value.trim();
+                const password = document.getElementById("password").value;
+                const confirmPassword = document.getElementById("confirmPassword").value;
+
+
+                document.querySelectorAll('.error').forEach(span => {
+                    span.textContent = "";
+                    span.style.display = "none";
+                });
+
+                let isValid = true;
+
+                if (username.length < 4) {
+                    showError(usernameError, "Username must be at least 4 characters");
+                    isValid = false;
+                }
+
+                if (!validateEmail(email)) {
+                    showError(emailError, "Please enter a valid email");
+                    isValid = false;
+                }
+
+                if (password.length < 6) {
+                    showError(passwordError, "Password must be at least 6 characters");
+                    isValid = false;
+                }
+                if (password !== confirmPassword) {
+                    showError(confirmPasswordError, "Passwords do not match");
+                    isValid = false;
+                }
+
+                return isValid;
+            }
+
+            function showError(element, message) {
+                element.textContent = message;
+                element.style.display = "block";
+
+                setTimeout(() => {
+                    element.textContent = "";
+                    element.style.display = "none";
+                }, 4000); // تختفي بعد 4 ثواني
+            }
+
+            function validateEmail(email) {
+                const pattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                return pattern.test(email);
+            } 
+        </script>
+    </body>
+
+    </html>

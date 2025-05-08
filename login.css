@@ -1,0 +1,89 @@
+* {
+    box-sizing: border-box;/* تجعل العناصر تاخذ حجمها*/
+}
+
+body {
+    font-family: 'Courier New', Courier, monospace;/* خط الكتابه*/
+    background-image: url('image login.jpg'); /* تأكد من وجود الصورة بهذا المسار */
+    background-size: cover;/* يجعل الصوره تغطي كامل الصفخه */
+    background-position: center;/* يجعل الصوره في المنتصف*/
+    background-repeat: no-repeat;/* يمنع تكرار الصوره حتي لو كانت اصغر */
+    display: flex;/* يجعل العناصر تتوزع داخل الصفحه  */
+    justify-content: center;/* يرتب العناصر في المنتصف افقي */
+    align-items: center;/* يرتب المحتوي في المنتصف عموديا */
+    color: aliceblue;
+    margin: 0;
+    padding: 20px;
+    min-height: 100vh;/* اقل قيمه للطول*/ 
+}
+.container {
+    height: 700px;
+     width: 600px;
+     padding: 40px;
+     border-radius: 20px;
+     box-shadow: 0  0  20px black;
+     border-radius: 20px;
+ }
+ 
+ .h1 {
+     font-size: 120px;
+     text-align: center;
+     color:sienna;
+     margin-bottom: 50px;
+    
+ }
+ 
+ form {
+     display: flex;
+     flex-direction: column;
+ }
+ 
+ label {
+     margin-bottom: 8px;
+     font-size: 25px;
+ }
+ input {
+    height: 40px;
+    margin-bottom: 50px;
+    border-radius: 10px;
+    padding:  15px 10px;
+    border: none;
+    color: rgb(28, 10, 58);
+    font-size: 16px;}
+   
+input::placeholder {
+    color: #aaa;
+}
+button {
+    background-color:sienna;
+    padding: 10px;
+    border-radius: 50px;
+    border: none;
+    color: white;
+    font-size: 22px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    width: 70%;
+    align-self: center;
+    margin-top: 10px;
+}
+button:hover {
+    background-color:rgb(235, 85, 20);
+    transform: scale(1.05);
+}
+button:hover {
+    background-color:rgb(235, 85, 20);
+    transform: scale(1.05);
+}
+
+@media (max-width: 600px) {
+    .h1 {
+        font-size: 100px;
+    }
+
+}
+.error-message{
+    color: rgb(251, 27, 27);
+    margin-top: 5px;
+    font-size: 30px;
+}

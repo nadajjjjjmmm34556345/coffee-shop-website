@@ -1,0 +1,130 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-image: url("image register.jpg");
+    background-size:cover ;
+    position:relative;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center; 
+    min-height: 100vh;
+  }
+  .register-container {
+    background-color:transparent;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: none;
+    width: 400px;
+    backdrop-filter:none ;
+    -webkit-backdrop-filter:none; /*  تاثير ضبابي للخلفية*/
+    border: 1px solid  #deb887;
+    color:  rgba(191, 64, 64, 0.925);
+    margin-top: 80px;
+   
+  }
+  
+  h2 {
+    margin-bottom: 20px;
+    text-align: center;
+    color:rgba(191, 64, 64, 0.925);
+    font-size: 40px;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+label {
+  margin-top: 10px;
+  font-size: 14px;
+ /* color: #555;*/
+}
+
+input {
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+#res {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: rgba(165, 42, 42, 0.76);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s; /* There */
+}
+#res:hover {
+  background-color:#6f4f37;
+}
+
+#reg {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #6B3f2A;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+#reg:hover {
+  background-color:#D2B097;
+}
+nav {
+  width: 100%;
+  background-color:transparent;
+  padding: 10px 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: fixed;/* make the nav constant in the top of page */
+  top: 0;
+  left: 0;
+  z-index:1000 ;
+  border-radius: 30px;
+  border: 3px solid #deb887;
+  box-shadow: #ccc;
+}
+nav a {
+  color: rgb(243, 243, 241);
+  text-decoration: none;
+  padding: 5px 5px;
+}
+nav a:hover{
+  background-color:#aa7156;
+  border-radius: 2px;
+  color: white;
+}
+.error {
+  color:#f53b3b ;
+  margin-top: 5px;
+  font-size: 15px;
+   
+ }
+
+
+
+
+
+
+
+
+
+
+  
