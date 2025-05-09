@@ -1,19 +1,4 @@
-let index = 0; // تعريف مؤشر الشريحة الحالية
-const slides = document.getElementById('slides'); // الحصول على عنصر الشرائح
-const totalSlides = slides.children.length; // حساب عدد الشرائح
 
-function showSlide(i) {
-   index = (i + totalSlides) % totalSlides; // التأكد من عدم الخروج عن عدد الشرائح
-    slides.style.transform = 'translateX(' + (-index * 100) + '%)'; // تحريك الشرائح
-}
-
-function next() {
-    showSlide(index + 1); // الانتقال إلى الشريحة التالية
-}
-
-function prev() {
-     showSlide(index - 1); // الرجوع إلى الشريحة السابقة
-}
 document.querySelectorAll('.favorite-icon').forEach(icon => {
     icon.addEventListener('click', () => {
          icon.classList.toggle('active'); // تبديل الحالة عند الضغط
