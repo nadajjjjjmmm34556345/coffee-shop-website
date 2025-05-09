@@ -1,9 +1,8 @@
 
-document.querySelectorAll('.favorite-icon').forEach(icon => {
-    icon.addEventListener('click', () => {
-         icon.classList.toggle('active'); // تبديل الحالة عند الضغط
-     });
- });
+    document.querySelectorAll('.favorite-icon').forEach(icon => {
+    icon.addEventListener('click', () => toggleFavorite(icon));
+});
+
  // عند اختيار حجم، يتم إضافة المنتج للسلة
 const sizeButtons = sizeSelection.querySelectorAll('.size-btn');
 sizeButtons.forEach(button => {
