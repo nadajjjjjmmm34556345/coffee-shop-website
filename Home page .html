@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home page</title>
+    <link rel="stylesheet" href="style-Home.css">
+</head>
+<body>
+        <header>
+            <nav class="navbar" aria-label="Main menu">
+                <ul class="navbar-items">
+                    <li class="logo">Cup<sub>&</sub>Cloud</li>
+                    
+                    <li class="navbar-items">
+                        <a href="Home page .html" aria-current="page" aria-label="Current page: Home">Home</a>
+                    </li>
+                    <li class="navbar-items">
+                        <a href="menu.html" aria-label="View our coffee menu">Menu</a>
+                    </li>
+                    <li class="navbar-items">
+                        <a href="drink-guide.html" aria-label="Coffee drink guide">Drink-Guide</a>
+                    </li>
+                    <li class="navbar-items">
+                        <a href="aboutus.html" aria-label="About Cup & Cloud">About-Us</a>
+                    </li>
+                    <li class="navbar-items">
+                        <a href="contact-us.html" aria-label="Contact us">Contact-Us</a>
+                    </li>
+                    <li class="navbar-items">
+                        <img id="moon" src="moon.png" alt="dark theme">
+                    </li>
+                </ul>
+            </nav>
+    <section class="tagline">
+        <h1 >Welcome to Cup & Cloud</h1>
+        <pre> Elevate your sips
+                    
+            to new heights </pre>
+            <div class="zoom">
+            <img class="imagehead" src="beans.webp" alt="beans">
+            </div>
+    </section>
+</header>
+   <main>
+        <section class="menupart">
+            <div class="text-content">
+                <pre class="menu-text">
+    Charge up with our small-batch coffees,
+    then cool down with a combo made in heaven:
+    Creamy artisanal ice cream or Warm, gooey cookies
+                </pre>
+                <a class="menu-button" href="menu.html">Visit our Menu</a>
+            </div>
+          <div class="video-container">
+                <video 
+                  aria-label="Artisanal coffee preparation: grinding beans, espresso extraction, and milk frothing"
+                  muted  preload="metadata" controls width="420"height="340">
+                  <source src="v.mp4.mp4" type="video/mp4">
+                  Your browser does not support HTML5 video.
+                </video>
+              </div> 
+        </section>
+
+    <article>
+    <pre class="about-ustext">
+    Our Story
+ We live for the perfect brew. What started as a simple love for 
+coffee grew into an endless pursuit of exceptional flavors—where every bean 
+tells a story and every cup sparks connection.
+    </pre>
+    <a class="about-us-button" href="aboutus.html">Learn more</a>
+</article>
+</main>
+        <footer>
+            <div class="footer-section">
+                <h3>Visit Us</h3>
+             <p>123 Coffee Lane, Bean City</p> 
+               <p>Open: Mon-Sun | 7AM–9PM</p> 
+            </div>
+            <div class="footer-socialmedia">
+                <h3>Connect</h3> 
+              <p ><a href="#" aria-label="Instagram"> Instagram</a> </p>
+              <p ><a href="#" aria-label="Facebook"> Facebook</a></p>
+              <p ><a href="#" aria-label="TikTok"> TikTok</a></p>
+            </div>
+            <div class="footer-section-uptade">
+                <h3>Stay Updated</h3>
+                    <form  onsubmit="return validateForm()"  method="POST" class="newsletter-form">
+                        <div class="form-group">
+                          <label for="user-email">Email address:</label>
+                          <input type="email" id="user-email" name="email" required  size="20">
+                        </div>
+                        <p>email</p>
+                        <button type="submit">Subscribe</button>
+                      </form>
+            </div>
+        <div class="copyright">
+            <p>© 2023 Your Coffee Shop. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="home-page.js"></script>
+</body>
+</html>  
