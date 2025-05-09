@@ -76,10 +76,15 @@ a:hover,#moon:hover {
   height: auto; /* الطول تلقائي حسب العرض */
   display: block; /* إزالة الفراغات أسفل الصورة */
 }
+.align{
+  text-align: center;
+}
 
 /* قسم أزرار التحكم */
 .controls {
   margin-top: 10px; /* مسافة من الأعلى */
+  justify-content: center;
+  text-align: center;
 }
 /* زر التحكم */
 button {
