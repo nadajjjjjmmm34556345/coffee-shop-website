@@ -7,10 +7,14 @@
     <link rel="stylesheet" href="donuts and croissants.css"> <!-- ربط ملف CSS الخاص بتنسيق الصفحة -->
     <title>donuts and croissants section</title> <!-- عنوان الصفحة الذي يظهر في تبويب المتصفح -->
     <script src="donuts and croissants.js"></script>
+
 </head>
 
 <body> <!-- بداية جسم الصفحة -->
+    <button onclick="toggleMode()" class="mode-toggle">🌙 Toggle Mode</button>
     <nav class="navbar" aria-label="Main menu">
+        
+
         <ul class="navbar-items">
             <li class="logo">Cup<sub>&</sub>Cloud</li>
 
@@ -29,25 +33,22 @@
             <li class="navbar-items">
                 <a href="contact-us.html" aria-label="Contact us">Contact-Us</a>
             </li>
-            <li class="navbar-items">
-                <img id="moon" src="moon.png" alt="dark theme">
-            </li>
+            
         </ul>
     </nav>
-  
-     <div class="Specialties"> <!-- قسم خاص بالتخصصات أو العروض -->
-        <div class="align"><h2>Our Specialties</h2></div> <!-- عنوان القسم -->
+    <div class="Specialties"> <!-- قسم خاص بالتخصصات أو العروض -->
+                  <div class="align"><h2>Our Specialties</h2></div> <!-- عنوان القسم -->
 
         <div class="slider"> <!-- حاوية للسلايدر (الصور المتحركة) -->
             <div class="slides" id="slides"> <!-- عنصر يحتوي على كل الشرائح -->
-                <div class="slide"><img src="Giant Donut Cake.jpg" alt=""></div> <!-- صورة لشريحة -->
-                <div class="slide"><img src="Maple Glazed Donuts [1_5 Hours].jpg" alt=""></div>
-                <div class="slide"><img src="choclate donuts.jpg" alt=""></div>
-                <div class="slide"><img src="Pistachio Rosewater Doughnut.jpg" alt=""></div>
-                <div class="slide"><img src=" Ice Cream Croissant Delight.jpg" alt=""></div>
-                <div class="slide"><img src="Chocolate Croissants (Zebra Croissants) _ Bake to the roots.jpg" alt=""></div>
-                <div class="slide"><img src="Croissant at Cannelé.jpg" alt=""></div>
-                <div class="slide"><img src="Cookie Croissant (Le Crookies)- A Paris Viral Recipe.jpg" alt=""></div>
+                <div class="slide"><img src="Giant Donut Cake.jpg" alt="donuts"></div> <!-- صورة لشريحة -->
+                <div class="slide"><img src="Maple Glazed Donuts [1_5 Hours].jpg" alt="donuts"></div>
+                <div class="slide"><img src="choclate donuts.jpg" alt="donuts"></div>
+                <div class="slide"><img src="Pistachio Rosewater Doughnut.jpg" alt="donuts"></div>
+                <div class="slide"><img src=" Ice Cream Croissant Delight.jpg" alt="croissants"></div>
+                <div class="slide"><img src="Chocolate Croissants (Zebra Croissants) _ Bake to the roots.jpg" alt="croissants"></div>
+                <div class="slide"><img src="Croissant at Cannelé.jpg" alt="croissants"></div>
+                <div class="slide"><img src="Cookie Croissant (Le Crookies)- A Paris Viral Recipe.jpg" alt="croissants"></div>
             </div>
         </div>
 
@@ -55,7 +56,48 @@
             <button onclick="prev()">Prev</button> <!-- زر السابق -->
             <button onclick="next()">Next</button> <!-- زر التالي -->
         </div>
+       <script>let index = 0; // تعريف مؤشر الشريحة الحالية
+        const slides = document.getElementById('slides'); // الحصول على عنصر الشرائح
+        const totalSlides = slides.children.length; // حساب عدد الشرائح
+        
+        function showSlide(i) {
+           index = (i + totalSlides) % totalSlides; // التأكد من عدم الخروج عن عدد الشرائح
+            slides.style.transform = 'translateX(' + (-index * 100) + '%)'; // تحريك الشرائح
+        }
+        
+        function next() {
+            showSlide(index + 1); // الانتقال إلى الشريحة التالية
+        }
+        
+        function prev() {
+             showSlide(index - 1); // الرجوع إلى الشريحة السابقة
+        }</script>
+
     </div>
+    <script>// عند اختيار حجم، يتم إضافة المنتج للسلة
+  // عند اختيار حجم، يتم إضافة المنتج للسلة
+    const sizeButtons = sizeSelection.querySelectorAll('.size-btn');
+    sizeButtons.forEach(button => {
+    button.addEventListener('click', () => {
+    const selectedSize = button.getAttribute('data-size');
+
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+    const item = { title, price, size: selectedSize, img }; // هنا قمت بإضافة الصورة في الكائن
+
+    // تحقق إذا كان المنتج موجودًا بالفعل في السلة
+    if (!cart.some(cartItem => cartItem.title === title && cartItem.size === selectedSize)) {
+      cart.push(item);
+      localStorage.setItem("cart", JSON.stringify(cart));
+      alert(`تمت إضافة ${title} (${selectedSize}) إلى السلة بسعر ${price}`);
+    } else {
+      alert(`${title} (${selectedSize}) موجود بالفعل في السلة`);
+    }
+
+    sizeSelection.remove(); // إغلاق النافذة بعد الإضافة
+  });
+});
+
+</script>
 
    <!-- قسم الكورنر الخاص بالدونات -->
    <section class="donuts" id="donuts">
@@ -337,6 +379,99 @@
              </div>
          </div>
      </section>
+  <script>
+        document.querySelectorAll('.favorite-icon').forEach(icon => {
+            icon.addEventListener('click', () => {
+                 icon.classList.toggle('active'); // تبديل الحالة عند الضغط
+             });
+         });</script>
+<script>// CSS للنافذة المنبثقة (يُضاف تلقائيًا في <head>)
+const style = document.createElement('style');
+style.innerHTML = `
+  .size-selection-popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+  }
+  .size-popup-content {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    max-width: 300px;
+  }
+  .size-btn {
+    margin: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  .close-btn {
+    margin-top: 15px;
+    background: red;
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+`;
+document.head.appendChild(style)</script>
+<script>
+// مفضلة المنتجات
+function toggleFavorite(icon) {
+  // استخراج بيانات المنتج من العنصر الأب
+  const title = icon.closest(".box").querySelector("h3").textContent;
+  const price = icon.closest(".box").querySelector(".content span").textContent;
+  const img = icon.closest(".box").querySelector("img").src;
+
+  // تغيير مظهر الأيقونة
+  icon.classList.toggle("active");
+
+  // جلب المفضلة من localStorage أو إنشاء مصفوفة جديدة
+  let favorites = JSON.parse(localStorage.getItem("favorites")) || [];
+
+  if (icon.classList.contains("active")) {
+    // إضافة للمفضلة إذا غير موجود مسبقًا
+    if (!favorites.some(item => item.title === title)) {
+      favorites.push({ title, price, img });
+      alert(`Added to favorites: ${title}`);
+    }
+  } else {
+    // إزالة من المفضلة
+    favorites = favorites.filter(item => item.title !== title);
+    alert(`Removed from favorites: ${title}`);
+  }
+
+  // حفظ المفضلة في localStorage
+  localStorage.setItem("favorites", JSON.stringify(favorites));
+}
+</script>
+<script>
+  function toggleMode() {
+    document.body.classList.toggle('dark-mode');
+
+    // حفظ المود في localStorage
+    if (document.body.classList.contains('dark-mode')) {
+      localStorage.setItem('theme', 'dark');
+    } else {
+      localStorage.setItem('theme', 'light');
+    }
+  }
+
+  // عند تحميل الصفحة، نتحقق من المود المحفوظ
+  window.onload = function() {
+    if (localStorage.getItem('theme') === 'dark') {
+      document.body.classList.add('dark-mode');
+    }
+  }
+</script>
 </body>
 </html>
-    </html>
