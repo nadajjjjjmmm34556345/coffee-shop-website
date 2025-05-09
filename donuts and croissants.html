@@ -10,8 +10,32 @@
 </head>
 
 <body> <!-- بداية جسم الصفحة -->
+    <nav class="navbar" aria-label="Main menu">
+        <ul class="navbar-items">
+            <li class="logo">Cup<sub>&</sub>Cloud</li>
 
-    <div class="Specialties"> <!-- قسم خاص بالتخصصات أو العروض -->
+            <li class="navbar-items">
+                <a href="Home page .html" aria-current="page" aria-label="Current page: Home">Home</a>
+            </li>
+            <li class="navbar-items">
+                <a href="menu.html" aria-label="View our coffee menu">Menu</a>
+            </li>
+            <li class="navbar-items">
+                <a href="drink-guide.html" aria-label="Coffee drink guide">Drink-Guide</a>
+            </li>
+            <li class="navbar-items">
+                <a href="aboutus.html" aria-label="About Cup & Cloud">About-Us</a>
+            </li>
+            <li class="navbar-items">
+                <a href="contact-us.html" aria-label="Contact us">Contact-Us</a>
+            </li>
+            <li class="navbar-items">
+                <img id="moon" src="moon.png" alt="dark theme">
+            </li>
+        </ul>
+    </nav>
+  
+     <div class="Specialties"> <!-- قسم خاص بالتخصصات أو العروض -->
         <h2>Our Specialties</h2> <!-- عنوان القسم -->
 
         <div class="slider"> <!-- حاوية للسلايدر (الصور المتحركة) -->
@@ -31,25 +55,6 @@
             <button onclick="prev()">Prev</button> <!-- زر السابق -->
             <button onclick="next()">Next</button> <!-- زر التالي -->
         </div>
-
-        <script> <!-- كود جافاسكربت لتحريك السلايدر -->
-            let index = 0; // تعريف مؤشر الشريحة الحالية
-            const slides = document.getElementById('slides'); // الحصول على عنصر الشرائح
-            const totalSlides = slides.children.length; // حساب عدد الشرائح
-
-            function showSlide(i) {
-                index = (i + totalSlides) % totalSlides; // التأكد من عدم الخروج عن عدد الشرائح
-                slides.style.transform = 'translateX(' + (-index * 100) + '%)'; // تحريك الشرائح
-            }
-
-            function next() {
-                showSlide(index + 1); // الانتقال إلى الشريحة التالية
-            }
-
-            function prev() {
-                showSlide(index - 1); // الرجوع إلى الشريحة السابقة
-            }
-        </script>
     </div>
 
    <!-- قسم الكورنر الخاص بالدونات -->
@@ -62,7 +67,7 @@
         <!-- عنصر دونات فردي -->
         <div class="box">
             <img src="Pistachio Rosewater Doughnut.jpg" alt=""> <!-- صورة المنتج -->
-            <div class="favorite-icon">❤️</div> <!-- زر الإعجاب -->
+            <div class="favorite-icon">❤</div> <!-- زر الإعجاب -->
             <h3>pistachio donuts</h3> <!-- اسم المنتج -->
             <div class="content">
                 <span>$30</span> <!-- السعر -->
@@ -76,7 +81,7 @@
             <div class="box">
  
                 <img src="choclate donuts.jpg" alt="">
-                <div class="favorite-icon">❤️</div>
+                <div class="favorite-icon">❤</div>
                 <h3>choclate donuts</h3>
                 <div class="content">
                     <span>$20</span>
@@ -87,7 +92,7 @@
     
             <div class="box">
                 <img src="choclate donut 2.jpg" alt="">
-                <div class="favorite-icon">❤️</div>
+                <div class="favorite-icon">❤</div>
                 <h3>choclate donuts with cracker</h3>
                 <div class="content">
                     <span>$25</span>
@@ -99,7 +104,7 @@
     
             <div class="box">
                 <img src="lotus biscoff donut.jpg" alt="">
-                <div class="favorite-icon">❤️</div>
+                <div class="favorite-icon">❤</div>
                 <h3>lotus biscoff donut</h3>
                 <div class="content">
                     <span>$45</span>
@@ -109,7 +114,7 @@
             </div>
             <div class="box">
                 <img src="Giant Donut Cake.jpg" alt="">
-                <div class="favorite-icon">❤️</div>
+                <div class="favorite-icon">❤</div>
                 <h3>Giant Donut Cake</h3>
                 <div class="content">
                     <span>$50</span>
@@ -120,7 +125,7 @@
     
             <div class="box">
                 <img src="Maple Glazed Donuts [1_5 Hours].jpg" alt="">
-                <div class="favorite-icon">❤️</div>
+                <div class="favorite-icon">❤</div>
                 <h3>strawberry donuts</h3>
                 <div class="content">
                     <span>$40</span>
@@ -130,7 +135,7 @@
             </div>
             <div class="box">
                 <img src="strawberry donuts.jpg" alt="">
-                <div class="favorite-icon">❤️</div>
+                <div class="favorite-icon">❤</div>
                 <h3>Maple Glazed Donuts</h3>
                 <div class="content">
                     <span>$80</span>
@@ -140,7 +145,7 @@
             </div>
             <div class="box">
                 <img src="Oreo Cookies and Cream Donuts - Baker by Nature.jpg" alt="">
-                <div class="favorite-icon">❤️</div>
+                <div class="favorite-icon">❤</div>
                 <h3>Oreo Cookies and Cream Donuts</h3>
                 <div class="content">
                     <span>$75</span>
@@ -150,7 +155,7 @@
             </div>
             <div class="box">
                 <img src="Vanilla Bean Cake Donuts with Blueberry Glaze.jpg" alt="">
-                <div class="favorite-icon">❤️</div>
+                <div class="favorite-icon">❤</div>
                 <h3>Vanilla Bean Cake Donuts with Blueberry Glaze </h3>
                 <div class="content">
                     <span>$90</span>
@@ -159,7 +164,7 @@
             </div>
             <div class="box">
                 <img src="Pistachio Rosewater Doughnut.jpg" alt="">
-                <div class="favorite-icon">❤️</div>
+                <div class="favorite-icon">❤</div>
                 <h3>Pistachio Rosewater Doughnut </h3>
                 <div class="content">
                     <span>$100</span>
@@ -169,7 +174,7 @@
             </div>
             <div class="box">
                 <img src="Boston Cream Doughnuts - Baker by Nature.jpg" alt="">
-                <div class="favorite-icon">❤️</div>
+                <div class="favorite-icon">❤</div>
                 <h3>Boston Cream Doughnuts</h3>
                 <div class="content">
                     <span>$55</span>
@@ -179,7 +184,7 @@
             </div>
             <div class="box">
                 <img src="Chocolate Blackout Doughnuts.jpg" alt="">
-                <div class="favorite-icon">❤️</div>
+                <div class="favorite-icon">❤</div>
                 <h3>Chocolate Blackout Doughnuts </h3>
                 <div class="content">
                     <span>$44</span>
@@ -189,7 +194,7 @@
             </div>
             <div class="box">
                 <img src="Baked Churro Donuts.jpg" alt="">
-                <div class="favorite-icon">❤️</div>
+                <div class="favorite-icon">❤</div>
                 <h3>Baked Churro Donuts  </h3>
                 <div class="content">
                     <span>$55</span>
@@ -201,7 +206,7 @@
                 
                
                 <img src="S'Mores Doughnuts with Chocolate Glaze.jpg" alt="">
-                <div class="favorite-icon">❤️</div>
+                <div class="favorite-icon">❤</div>
                 <h3>S'Mores Doughnuts with Chocolate Glaze</h3>
                 <div class="content">
                     <span>$50</span>
@@ -213,7 +218,7 @@
                 
                
                 <img src="Cloud-like Vanilla Donuts.jpg" alt="">
-                <div class="favorite-icon">❤️</div>
+                <div class="favorite-icon">❤</div>
                 <h3>Baked Churro Donuts</h3>
                 <div class="content">
                     <span>30$</span>
@@ -225,7 +230,7 @@
                 
                
                 <img src="Simple Homemade Sugar Donuts.jpg" alt="">
-                <div class="favorite-icon">❤️</div>
+                <div class="favorite-icon">❤</div>
                 <h3>Simple Homemade Sugar Donuts</h3>
                 <div class="content">
                     <span>30$</span>
@@ -245,7 +250,7 @@
             <!-- عنصر كرواسون فردي -->
             <div class="box">
                 <img src="Baked Croissant Strawberry Jam On Black Stock Photo 1017239296 _ Shutterstock.jpg" alt="">
-                <div class="favorite-icon">❤️</div>
+                <div class="favorite-icon">❤</div>
                 <h3>Baked Croissant Strawberry Jam</h3>
                 <div class="content">
                     <span>$20</span>
@@ -259,7 +264,7 @@
              <div class="box">
             
                 <img src="Classic French Croissants 101 Guide.jpg" alt="">
-                <div class="favorite-icon">❤️</div>
+                <div class="favorite-icon">❤</div>
                  <h3>Chocolate Croissants (Zebra Croissants)</h3>
                  <div class="content">
                      <span>15$</span>
@@ -270,7 +275,7 @@
      
              <div class="box">
                  <img src="Classic French Croissants 101 Guide.jpg" alt="">
-                 <div class="favorite-icon">❤️</div>
+                 <div class="favorite-icon">❤</div>
                  <h3>Classic French Croissants</h3>
                  <div class="content">
                      <span>30$</span>
@@ -281,7 +286,7 @@
      
              <div class="box">
                  <img src="Cookie Croissant (Le Crookies)- A Paris Viral Recipe.jpg" alt="">
-                 <div class="favorite-icon">❤️</div>
+                 <div class="favorite-icon">❤</div>
                  <h3>Cookie Croissant (Le Crookies)</h3>
                  <div class="content">
                      <span>45$</span>
@@ -291,7 +296,7 @@
              </div>
              <div class="box">
                  <img src="Croissant at Cannelé.jpg" alt="">
-                 <div class="favorite-icon">❤️</div>
+                 <div class="favorite-icon">❤</div>
                  <h3>Croissant at Cannelé</h3>
                  <div class="content">
                      <span>40$</span>
@@ -302,7 +307,7 @@
      
              <div class="box">
                  <img src="Flaky Pistachio Croissants with a Sweet Filling.jpg" alt="">
-                 <div class="favorite-icon">❤️</div>
+                 <div class="favorite-icon">❤</div>
                  <h3>Flaky Pistachio Croissants with a Sweet Filling</h3>
                  <div class="content">
                      <span>50$</span>
@@ -312,7 +317,7 @@
              </div>
              <div class="box">
                  <img src="Recette de la Brioche Feuilletée — maPatisserie_fr.jpg" alt="">
-                 <div class="favorite-icon">❤️</div>
+                 <div class="favorite-icon">❤</div>
                  <h3>Recette de la Brioche Feuilletée</h3>
                  <div class="content">
                      <span>80$</span>
@@ -322,7 +327,7 @@
              </div>
              <div class="box">
                  <img src="Ice Cream Croissant Delight.jpg" alt="">
-                 <div class="favorite-icon">❤️</div>
+                 <div class="favorite-icon">❤</div>
                  <h3>Ice Cream Croissant Delight</h3>
                  <div class="content">
                      <span>75$</span>
@@ -332,23 +337,6 @@
              </div>
          </div>
      </section>
-
-    <!-- كود لتفعيل زر الإعجاب عند النقر عليه -->
-    <script>
-        document.querySelectorAll('.favorite-icon').forEach(icon => {
-            icon.addEventListener('click', () => {
-                icon.classList.toggle('active'); // تبديل الحالة عند الضغط
-            });
-        });
-    </script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
+    </html>
