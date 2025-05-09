@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <link rel="stylesheet" href="iceCream.css">
+    <title>iceCream section</title>
+    <script src="icecream.js"></script>
+</head>
+<body>
+     <nav class="navbar" aria-label="Main menu">
+            <ul class="navbar-items">
+                <li class="logo">Cup<sub>&</sub>Cloud</li>
+
+                <li class="navbar-items">
+                    <a href="Home page .html" aria-label="Current page: Home">Home</a>
+                </li>
+                <li class="navbar-items">
+                    <a href="menu.html" aria-label="View our coffee menu">Menu</a>
+                </li>
+                <li class="navbar-items">
+                    <a href="drink-guide.html" aria-label="Coffee drink guide">Drink-Guide</a>
+                </li>
+                <li class="navbar-items">
+                    <a href="aboutus.html" aria-label="About Cup & Cloud">About-Us</a>
+                </li>
+                <li class="navbar-items">
+                    <a href="contact-us.html" aria-label="Contact us">Contact-Us</a>
+                </li>
+            </ul>
+          </nav>
+    <button class="themeToggle" onclick="toggleDarkMode()" style="position: fixed; top: 20px; right: 20px;">Toggle Dark Mode</button>
+    <div class="typing-container">
+        <span class="typing-text">Chill your day with the sweetest flavors!</span>
+    </div>
+    <div class="search-container">
+        <input type="text" id="searchInput" placeholder="Search for ice cream..." oninput="filterProducts()">
+    </div>
+    
+    <section class="products" id="products">
+        <div class="products-container">
+   <div class="box">
+    <img src="Oreo Ice Cream.jpeg" alt="">
+    <h3>Oreo Ice Cream</h3>
+    <div class="content">
+        <span>25$</span>
+        <a href="#" onclick="addToCart(this)">🛒</a>
+        <div class="favorite-icon" onclick="toggleFavorite(this)">❤</div>
+    </div>
+    <div class="details">
+        <p><strong>Ingredients:</strong> Milk, Sugar, Oreo cookies, Vanilla.</p>
+        <p><strong>Sizes:</strong> Small, Medium, Large</p>
+    </div>
+</div>
+
+<div class="box">
+    <img src="Raspberry Chocolate Chunk Ice Cream [40 Minutes].jpeg" alt="">
+    <h3>Raspberry Chocolate Chunk Ice Cream</h3>
+    <div class="content">
+        <span>30$</span>
+        <a href="#" onclick="addToCart(this)">🛒</a>
+        <div class="favorite-icon" onclick="toggleFavorite(this)">❤</div>
+    </div>
+    <div class="details">
+        <p><strong>Ingredients:</strong> Cream, Raspberries, Chocolate chunks, Sugar.</p>
+        <p><strong>Sizes:</strong> Small, Medium, Large</p>
+    </div>
+</div>
+
+<div class="box">
+    <img src="Black Charcoal Coconut Ice Cream.jpeg" alt="">
+    <h3>Black Charcoal Coconut Ice Cream</h3>
+    <div class="content">
+        <span>50$</span>
+        <a href="#" onclick="addToCart(this)">🛒</a>
+        <div class="favorite-icon" onclick="toggleFavorite(this)">❤</div>
+    </div>
+    <div class="details">
+        <p><strong>Ingredients:</strong> Coconut milk, Charcoal, Sugar, Vanilla.</p>
+        <p><strong>Sizes:</strong> Small, Medium, Large</p>
+    </div>
+</div>
+
+<div class="box">
+    <img src="Chocolate Heaven (@ChocolateUrge) on X.jpeg" alt="">
+    <h3>Chocolate Ice Cream</h3>
+    <div class="content">
+        <span>45$</span>
+        <a href="#" onclick="addToCart(this)">🛒</a>
+        <div class="favorite-icon" onclick="toggleFavorite(this)">❤</div>
+    </div>
+    <div class="details">
+        <p><strong>Ingredients:</strong> Cocoa, Milk, Cream, Sugar.</p>
+        <p><strong>Sizes:</strong> Small, Medium, Large</p>
+    </div>
+</div>
+
+<div class="box">
+    <img src="Creamy Mango Ice Cream Recipe.jpeg" alt="">
+    <h3>Creamy Mango Ice Cream</h3>
+    <div class="content">
+        <span>33$</span>
+        <a href="#" onclick="addToCart(this)">🛒</a>
+        <div class="favorite-icon" onclick="toggleFavorite(this)">❤</div>
+    </div>
+    <div class="details">
+        <p><strong>Ingredients:</strong> Mango, Cream, Milk, Sugar.</p>
+        <p><strong>Sizes:</strong> Small, Medium, Large</p>
+    </div>
+</div>
+
+<div class="box">
+    <img src="Crimson Chocolate Rhapsody Ice Cream.jpeg" alt="">
+    <h3>Crimson Chocolate Rhapsody Ice Cream</h3>
+    <div class="content">
+        <span>55$</span>
+        <a href="#" onclick="addToCart(this)">🛒</a>
+        <div class="favorite-icon" onclick="toggleFavorite(this)">❤</div>
+    </div>
+    <div class="details">
+        <p><strong>Ingredients:</strong> Dark chocolate, Raspberries, Cream, Sugar.</p>
+        <p><strong>Sizes:</strong> Small, Medium, Large</p>
+    </div>
+</div>
+
+<div class="box">
+    <img src="Churro Ice Cream with Dulce de Leche _ No-Churn.jpeg" alt="">
+    <h3>Churro Ice Cream with Dulce de Leche</h3>
+    <div class="content">
+        <span>70$</span>
+        <a href="#" onclick="addToCart(this)">🛒</a>
+        <div class="favorite-icon" onclick="toggleFavorite(this)">❤</div>
+    </div>
+    <div class="details">
+        <p><strong>Ingredients:</strong> Churro chunks, Cinnamon, Dulce de leche, Cream.</p>
+        <p><strong>Sizes:</strong> Small, Medium, Large</p>
+    </div>
+</div>
+
+<div class="box">
+    <img src="Pistachio Ice Cream [25 Minutes].jpeg" alt="">
+    <h3>Pistachio Ice Cream</h3>
+    <div class="content">
+        <span>80$</span>
+        <a href="#" onclick="addToCart(this)">🛒</a>
+        <div class="favorite-icon" onclick="toggleFavorite(this)">❤</div>
+    </div>
+    <div class="details">
+        <p><strong>Ingredients:</strong> Pistachio, Milk, Cream, Sugar.</p>
+        <p><strong>Sizes:</strong> Small, Medium, Large</p>
+    </div>
+</div>
+
+<div class="box">
+    <img src="Blueberry icecream 🍦🍨.jpeg" alt="">
+    <h3>Blueberry Ice Cream</h3>
+    <div class="content">
+        <span>76$</span>
+        <a href="#" onclick="addToCart(this)">🛒</a>
+        <div class="favorite-icon" onclick="toggleFavorite(this)">❤</div>
+    </div>
+    <div class="details">
+        <p><strong>Ingredients:</strong> Blueberries, Cream, Lemon zest, Sugar.</p>
+        <p><strong>Sizes:</strong> Small, Medium, Large</p>
+    </div>
+</div>
+
+<div class="box">
+    <img src="Wild Blueberry Lavender Coconut Ice Cream - Ambitious Kitchen.jpeg" alt="">
+    <h3>Wild Blueberry Lavender Coconut Ice Cream</h3>
+    <div class="content">
+        <span>90$</span>
+        <a href="#" onclick="addToCart(this)">🛒</a>
+        <div class="favorite-icon" onclick="toggleFavorite(this)">❤</div>
+    </div>
+    <div class="details">
+        <p><strong>Ingredients:</strong> Wild blueberries, Lavender, Coconut milk, Sugar.</p>
+        <p><strong>Sizes:</strong> Small, Medium, Large</p>
+    </div>
+</div>
+
+<div class="box">
+    <img src="Easy Homemade Vanilla Recipe - Perfect for Baking & Desserts.jpeg" alt="">
+    <h3>Vanilla Ice Cream</h3>
+    <div class="content">
+        <span>55$</span>
+        <a href="#" onclick="addToCart(this)">🛒</a>
+        <div class="favorite-icon" onclick="toggleFavorite(this)">❤</div>
+    </div>
+    <div class="details">
+        <p><strong>Ingredients:</strong> Vanilla bean, Milk, Sugar, Cream.</p>
+        <p><strong>Sizes:</strong> Small, Medium, Large</p>
+    </div>
+</div>
+
+<div class="box">
+    <img src="Lemon Ice cream.jpeg" alt="">
+    <h3>Lemon Ice Cream</h3>
+    <div class="content">
+        <span>40$</span>
+        <a href="#" onclick="addToCart(this)">🛒</a>
+        <div class="favorite-icon" onclick="toggleFavorite(this)">❤</div>
+    </div>
+    <div class="details">
+        <p><strong>Ingredients:</strong> Lemon juice, Zest, Cream, Sugar.</p>
+        <p><strong>Sizes:</strong> Small, Medium, Large</p>
+    </div>
+</div>
+
+<div class="box">
+    <img src="Coffee Ice Cream {only 4 ingredients} - Celebrating Sweets.jpeg" alt="">
+    <h3>Coffee Ice Cream</h3>
+    <div class="content">
+        <span>33$</span>
+        <a href="#" onclick="addToCart(this)">🛒</a>
+        <div class="favorite-icon" onclick="toggleFavorite(this)">❤</div>
+    </div>
+    <div class="details">
+        <p><strong>Ingredients:</strong> Coffee, Milk, Cream, Sugar.</p>
+        <p><strong>Sizes:</strong> Small, Medium, Large</p>
+    </div>
+</div>
+
+           
+        </div>
+    </section>
+    
+</body>
+</html>

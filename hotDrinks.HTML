@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Coffee Section</title>
+  <link rel="stylesheet" href="hotdrinks.css">
+  <script src="hotdrinks.js" defer></script>
+</head>
+<body>
+  <nav class="navbar" aria-label="Main menu">
+            <ul class="navbar-items">
+                <li class="logo">Cup<sub>&</sub>Cloud</li>
+
+                <li class="navbar-items">
+                    <a href="Home page .html" aria-label="Current page: Home">Home</a>
+                </li>
+                <li class="navbar-items">
+                    <a href="menu.html" aria-label="View our coffee menu">Menu</a>
+                </li>
+                <li class="navbar-items">
+                    <a href="drink-guide.html" aria-label="Coffee drink guide">Drink-Guide</a>
+                </li>
+                <li class="navbar-items">
+                    <a href="aboutus.html" aria-label="About Cup & Cloud">About-Us</a>
+                </li>
+                <li class="navbar-items">
+                    <a href="contact-us.html" aria-label="Contact us">Contact-Us</a>
+                </li>
+            </ul>
+          </nav>
+           <button id="toggle-theme">Change Theme</button>
+  <div class="view-toggle">
+    <button onclick="setGridView('products')">Grid view</button>
+    <button onclick="setListView('products')">List view</button>
+  </div>
+  <div class="dynamic-controls" style="text-align:center; margin: 20px;">
+    <button id="hideProducts">إخفاء المنتجات</button>
+    <button id="showProducts">إظهار المنتجات</button>
+    <button id="addProduct">إضافة منتج</button>
+  </div>
+  <section class="products" id="products">
+    <div class="products-container">
+      
+      <div class="pagination">
+        <button onclick="changePage(1)">1</button>
+        <button onclick="changePage(2)">2</button>
+        <button onclick="changePage(3)">3</button>
+      </div>
+      
+      <div class="box">
+        <img src="download (11).jpeg" alt="Espresso Coffee">
+        <h3>Espresso Coffee</h3>
+        <div class="content">
+            <span>30$</span>
+            <a href="#" onclick="addToCart(this)">🛒</a>
+            <div class="favorite-icon" onclick="toggleFavorite(this)">❤</div>
+        </div>
+         <div class="details">
+        <p><strong>details</strong> Bold. Rich. Unforgettable. Our Espresso Coffee delivers an intense shot of flavor with a smooth finish—perfect for true coffee lovers</p>
+        <p><strong>Sizes:</strong> Small, Medium, Large</p>
+    </div>
+      </div>
+
+      <div class="box">
+        <img src="Rich Coffee Bliss_ Expertly Crafted Espresso Con Panna to Savor.jpeg" alt="Americano Coffee">
+        <h3>Americano Coffee</h3>
+        <div class="content">
+          <span>23$</span>
+          <a href="#" onclick="addToCart(this)">🛒</a>
+          <div class="favorite-icon" onclick="toggleFavorite(this)">❤</div>
+        </div>
+        <div class="details">
+          <p><strong>Details:</strong> A smooth blend of espresso and hot water, offering a bold yet balanced flavor for an energizing experience.</p>
+          <p><strong>Sizes:</strong> Small, Medium, Large</p>
+        </div>
+      </div>
+        <div class="box">
+        <img src="Salted Caramel Macchiato.jpeg" alt="Turkish Greek Coffee">
+        <h3>Turkish Greek Coffee</h3>
+        <div class="content">
+          <span>33$</span>
+          <a href="#" onclick="addToCart(this)">🛒</a>
+          <div class="favorite-icon" onclick="toggleFavorite(this)">❤</div>
+        </div>
+        <div class="details">
+          <p><strong>Details:</strong> Traditionally brewed with fine grounds and a touch of spice, this coffee is rich, aromatic, and full-bodied.</p>
+          <p><strong>Sizes:</strong> Single Serve</p>
+        </div>
+      </div>
+
+      <div class="box">
+        <img src="download (15).jpeg" alt="Arabic Coffee">
+        <h3>Arabic Coffee</h3>
+        <div class="content">
+          <span>40$</span>
+          <a href="#" onclick="addToCart(this)">🛒</a>
+          <div class="favorite-icon" onclick="toggleFavorite(this)">❤</div>
+        </div>
+        <div class="details">
+          <p><strong>Details:</strong> Spiced with cardamom and served in a traditional dallah, this coffee is a symbol of hospitality and warmth.</p>
+          <p><strong>Sizes:</strong> Small Pot, Large Pot</p>
+        </div>
+      </div>
+      <div class="box">
+        <img src="download (18).jpeg" alt="French Coffee">
+        <h3>French Coffee</h3>
+        <div class="content">
+          <span>35$</span>
+          <a href="#" onclick="addToCart(this)">🛒</a>
+          <div class="favorite-icon" onclick="toggleFavorite(this)">❤</div>
+        </div>
+        <div class="details">
+          <p><strong>Details:</strong> A creamy and elegant brew made with rich dark roast and steamed milk, perfect for a Parisian-style indulgence.</p>
+          <p><strong>Sizes:</strong> Cup, Mug</p>
+        </div>
+      </div>
+       <div class="box">
+        <img src="Latte Arts.jpeg" alt="Latte">
+        <h3>Latte</h3>
+        <div class="content">
+          <span>50$</span>
+          <a href="#" onclick="addToCart(this)">🛒</a>
+          <div class="favorite-icon" onclick="toggleFavorite(this)">❤</div>
+        </div>
+        <div class="details">
+          <p><strong>Details:</strong> Silky smooth milk and bold espresso combine to create this classic, comforting favorite. A perfect balance of flavor and texture.</p>
+          <p><strong>Sizes:</strong> Small, Medium, Large</p>
+        </div>
+      </div>
+      <div class="box">
+        <img src="23 Brownie Batter Desserts That Will Make You Rethink Cookie Dough.jpeg" alt="Brownie Batter Desserts">
+        <h3>Brownie Batter Desserts</h3>
+        <div class="content">
+          <span>55$</span>
+          <a href="#" onclick="addToCart(this)">🛒</a>
+          <div class="favorite-icon" onclick="toggleFavorite(this)">❤</div>
+        </div>
+        <div class="details">
+          <p><strong>Details:</strong> A rich and indulgent dessert made with decadent brownie batter and a perfect pairing to your coffee break.</p>
+          <p><strong>Sizes:</strong> Individual, Family Pack</p>
+        </div>
+      </div>
+      <div class="box">
+        <img src="Cozy Winter Drink Recipes You'll Love_ 21 Ideas.jpeg" alt="Cozy Winter Drink">
+        <h3>Cozy Winter Drink</h3>
+        <div class="content">
+          <span>60$</span>
+          <a href="#" onclick="addToCart(this)">🛒</a>
+          <div class="favorite-icon" onclick="toggleFavorite(this)">❤</div>
+        </div>
+        <div class="details">
+          <p><strong>Details:</strong> A warm, comforting beverage that combines spices, chocolate, and a rich base to keep you cozy all winter long.</p>
+          <p><strong>Sizes:</strong> Small, Medium, Large</p>
+        </div>
+      </div>
+      <div class="box">
+        <img src="Coffee.jpeg" alt="Black Coffee">
+        <h3>Black Coffee</h3>
+        <div class="content">
+          <span>30$</span>
+          <a href="#" onclick="addToCart(this)">🛒</a>
+          <div class="favorite-icon" onclick="toggleFavorite(this)">❤</div>
+        </div>
+        <div class="details">
+          <p><strong>Details:</strong> Pure, bold, and unadulterated. A true classic that highlights the rich flavors of freshly brewed coffee.</p>
+          <p><strong>Sizes:</strong> Small, Medium, Large</p>
+        </div>
+      </div>
+      <div class="box">
+        <img src="White Chocolate Chai Espresso with Raspberry.jpeg" alt="White Chocolate Chai Espresso with Raspberry">
+        <h3>White Chocolate Chai Espresso with Raspberry</h3>
+        <div class="content">
+          <span>80$</span>
+          <a href="#" onclick="addToCart(this)">🛒</a>
+          <div class="favorite-icon" onclick="toggleFavorite(this)">❤</div>
+        </div>
+        <div class="details">
+          <p><strong>Details:</strong> A decadent fusion of white chocolate, chai spices, and espresso, topped with a hint of raspberry for a sweet twist.</p>
+          <p><strong>Sizes:</strong> Small, Medium, Large</p>
+        </div>
+      </div>
+       <div class="box">
+        <img src="Crockpot Hot Chocolate.jpeg" alt="Crockpot Hot Chocolate">
+        <h3>Crockpot Hot Chocolate</h3>
+        <div class="content">
+          <span>40$</span>
+          <a href="#" onclick="addToCart(this)">🛒</a>
+          <div class="favorite-icon" onclick="toggleFavorite(this)">❤</div>
+        </div>
+        <div class="details">
+          <p><strong>Details:</strong> Smooth, creamy, and perfectly sweet, our crockpot hot chocolate will warm you from the inside out.</p>
+          <p><strong>Sizes:</strong> Small, Large</p>
+        </div>
+      </div>
+            <div class="box">
+        <img src="Dark Roast Coffee Brewing A Beginner's Guide.jpeg" alt="Dark Roast Coffee">
+        <h3>Dark Roast Coffee</h3>
+        <div class="content">
+          <span>30$</span>
+          <a href="#" onclick="addToCart(this)">🛒</a>
+          <div class="favorite-icon" onclick="toggleFavorite(this)">❤</div>
+        </div>
+        <div class="details">
+          <p><strong>Details:</strong> Rich, dark, and bold. Our dark roast coffee offers a robust flavor profile with a full-bodied experience.</p>
+          <p><strong>Sizes:</strong> Small, Medium, Large</p>
+        </div>
+      </div>
+    <div class="box">
+        <img src="Make Mocchacino_ Creamy Coffee Delight.jpeg" alt="Creamy Coffee Delight">
+        <h3>Creamy Coffee Delight</h3>
+        <div class="content">
+          <span>30$</span>
+          <a href="#" onclick="addToCart(this)">🛒</a>
+          <div class="favorite-icon" onclick="toggleFavorite(this)">❤</div>
+        </div>
+        <div class="details">
+          <p><strong>Details:</strong> A creamy, dreamy coffee treat that blends espresso with velvety milk and a touch of sweetness.</p>
+          <p><strong>Sizes:</strong> Small, Medium, Large</p>
+        </div>
+      </div>
+      <div class="box">
+        <img src="download (22).jpeg" alt="Pumpkin Spice Hot Chocolate">
+        <h3>Pumpkin Spice Hot Chocolate</h3>
+        <div class="content">
+          <span>30$</span>
+          <a href="#" onclick="addToCart(this)">🛒</a>
+          <div class="favorite-icon" onclick="toggleFavorite(this)">❤</div>
+        </div>
+        <div class="details">
+          <p><strong>Details:</strong> A seasonal favorite that combines the comforting flavors of pumpkin spice and rich hot chocolate.</p>
+          <p><strong>Sizes:</strong> Small, Medium, Large</p>
+        </div>
+      </div>
+   <div class="box">
+        <img src="cappuccino-756490_1920.jpg" alt="Cappuccino">
+        <h3>Cappuccino</h3>
+        <div class="content">
+          <span>40$</span>
+          <a href="#" onclick="addToCart(this)">🛒</a>
+          <div class="favorite-icon" onclick="toggleFavorite(this)">❤</div>
+        </div>
+        <div class="details">
+          <p><strong>Details:</strong> A classic coffee drink made with equal parts espresso, steamed milk, and foam for a perfect balance.</p>
+          <p><strong>Sizes:</strong> Small, Medium, Large</p>
+        </div>
+      </div>
+
+      <!-- Cardamom-Ginger Tea -->
+      <div class="box">
+        <img src="Cardamom-Ginger Tea _ Elaichi Chai.jpeg" alt="Cardamom-Ginger Tea">
+        <h3>Cardamom-Ginger Tea</h3>
+        <div class="content">
+          <span>30$</span>
+          <a href="#" onclick="addToCart(this)">🛒</a>
+          <div class="favorite-icon" onclick="toggleFavorite(this)">❤</div>
+        </div>
+        <div class="details">
+          <p><strong>Details:</strong> A fragrant blend of cardamom, ginger, and black tea that provides a warm, aromatic experience.</p>
+          <p><strong>Sizes:</strong> Small, Medium, Large</p>
+        </div>
+      </div>
+
+      <div class="box">
+        <img src="❤  tea (1).jpeg" alt="Hot Tea">
+        <h3>Hot Tea</h3>
+        <div class="content">
+          <span>30$</span>
+          <a href="#" onclick="addToCart(this)">🛒</a>
+          <div class="favorite-icon" onclick="toggleFavorite(this)">❤</div>
+        </div>
+        <div class="details">
+          <p><strong>Details:</strong> A soothing, fresh tea made with handpicked leaves, perfect for a moment of relaxation.</p>
+          <p><strong>Sizes:</strong> Small, Medium, Large</p>
+        </div>
+      </div>
+      <div class="box">
+        <img src="How to Make Ginger Tea With Lemon.jpeg" alt="Ginger Tea With Lemon">
+        <h3>Ginger Tea With Lemon</h3>
+        <div class="content">
+          <span>30$</span>
+          <a href="#" onclick="addToCart(this)">🛒</a>
+          <div class="favorite-icon" onclick="toggleFavorite(this)">❤</div>
+        </div>
+        <div class="details">
+          <p><strong>Details:</strong> A revitalizing blend of fresh ginger and zesty lemon that provides both warmth and refreshment.</p>
+          <p>v<strong>Details:</strong> A soothing, fresh tea made with handpicked leaves, perfect for a moment of relaxation.</p>
+          <p><strong>Sizes:</strong> Small, Medium, Large</p>
+           </div>
+      </div>
+     
+
+    </div>
+  </section>
+</body>
+</html>
