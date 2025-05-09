@@ -70,7 +70,7 @@ body {
 .search-container {
   position: fixed;
   top: 80px;
-  right: 200px;
+  right: 75px;
 }
 .search-bar {
   padding: 15px;
@@ -80,3 +80,51 @@ body {
   border: none;
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
 }
+
+.p1{
+  position: fixed;
+  top: 95px;
+  right: 700px;
+  display: inline-block;
+  padding:10px 20px;
+  color:#fff;
+  background-color: black;
+  font-size: 19px;
+  text-decoration: none;
+  border-radius: 25px;
+}
+.p2{
+  position: fixed;
+  top: 95px;
+  right: 600px;
+  display: inline-block;
+  padding:10px 20px;
+  color:#fff;
+  background-color: black;
+  font-size: 19px;
+  text-decoration: none;
+  border-radius: 25px;
+}
+.navbar {
+  background-color: #333;
+  padding: 15px 30px;
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin: 0;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 18px;
+}
+
