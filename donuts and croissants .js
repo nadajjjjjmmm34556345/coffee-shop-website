@@ -20,26 +20,27 @@ document.querySelectorAll('.favorite-icon').forEach(icon => {
      });
  });
  // عند اختيار حجم، يتم إضافة المنتج للسلة
- const sizeButtons = sizeSelection.querySelectorAll('.size-btn');
- sizeButtons.forEach(button => {
-   button.addEventListener('click', () => {
-     const selectedSize = button.getAttribute('data-size');
+const sizeButtons = sizeSelection.querySelectorAll('.size-btn');
+sizeButtons.forEach(button => {
+  button.addEventListener('click', () => {
+    const selectedSize = button.getAttribute('data-size');
 
-     let cart = JSON.parse(localStorage.getItem("cart")) || [];
-     const item = { title, price, size: selectedSize, img }; // هنا قمت بإضافة الصورة في الكائن
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+    const item = { title, price, size: selectedSize, img }; // هنا قمت بإضافة الصورة في الكائن
 
-     // تحقق إذا كان المنتج موجودًا بالفعل في السلة
-     if (!cart.some(cartItem => cartItem.title === title && cartItem.size === selectedSize)) {
-       cart.push(item);
-       localStorage.setItem("cart", JSON.stringify(cart));
-       alert(تمت إضافة ${title} (${selectedSize}) إلى السلة بسعر ${price});
-     } else {
-       alert(${title} (${selectedSize}) موجود بالفعل في السلة);
-     }
+    // تحقق إذا كان المنتج موجودًا بالفعل في السلة
+    if (!cart.some(cartItem => cartItem.title === title && cartItem.size === selectedSize)) {
+      cart.push(item);
+      localStorage.setItem("cart", JSON.stringify(cart));
+      alert(`تمت إضافة ${title} (${selectedSize}) إلى السلة بسعر ${price}`);
+    } else {
+      alert(`${title} (${selectedSize}) موجود بالفعل في السلة`);
+    }
 
-     sizeSelection.remove(); // إغلاق النافذة بعد الإضافة
-   });
- });
+    sizeSelection.remove(); // إغلاق النافذة بعد الإضافة
+  });
+});
+
 
 // CSS للنافذة المنبثقة (يُضاف تلقائيًا في <head>)
 const style = document.createElement('style');
@@ -79,27 +80,31 @@ style.innerHTML = `
     border-radius: 5px;
   }
 `;
-document.head.appendChild(style)
-// مفضلة المنتجات
+document.head.appendChild(style)// مفضلة المنتجات
 function toggleFavorite(icon) {
+  // استخراج بيانات المنتج من العنصر الأب
   const title = icon.closest(".box").querySelector("h3").textContent;
   const price = icon.closest(".box").querySelector(".content span").textContent;
   const img = icon.closest(".box").querySelector("img").src;
 
+  // تغيير مظهر الأيقونة
   icon.classList.toggle("active");
 
+  // جلب المفضلة من localStorage أو إنشاء مصفوفة جديدة
   let favorites = JSON.parse(localStorage.getItem("favorites")) || [];
 
   if (icon.classList.contains("active")) {
-    // تحقق من عدم وجوده مسبقًا
+    // إضافة للمفضلة إذا غير موجود مسبقًا
     if (!favorites.some(item => item.title === title)) {
       favorites.push({ title, price, img });
-      alert(Added to favorites: ${title});
+      alert(`Added to favorites: ${title}`);
     }
   } else {
+    // إزالة من المفضلة
     favorites = favorites.filter(item => item.title !== title);
-    alert(Removed from favorites: ${title});
+    alert(`Removed from favorites: ${title}`);
   }
 
+  // حفظ المفضلة في localStorage
   localStorage.setItem("favorites", JSON.stringify(favorites));
 }
