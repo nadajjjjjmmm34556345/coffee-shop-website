@@ -379,12 +379,11 @@
              </div>
          </div>
      </section>
-  <script>
-        document.querySelectorAll('.favorite-icon').forEach(icon => {
-            icon.addEventListener('click', () => {
-                 icon.classList.toggle('active'); // تبديل الحالة عند الضغط
-             });
-         });</script>
+  <script> 
+    document.querySelectorAll('.favorite-icon').forEach(icon => {
+    icon.addEventListener('click', () => toggleFavorite(icon));
+});
+</script>
 <script>// CSS للنافذة المنبثقة (يُضاف تلقائيًا في <head>)
 const style = document.createElement('style');
 style.innerHTML = `
