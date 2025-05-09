@@ -3,7 +3,7 @@ body {
   font-family: Arial, sans-serif; /* تحديد نوع الخط */
   margin: 0; /* إزالة الهامش الخارجي */
   padding: 0; /* إزالة الحشو الداخلي */
-  background-color: #d3bdaa; /* لون الخلفية الأساسي */
+  background-color: beige; /* لون الخلفية الأساسي */
   color: #333; /* لون النص */
 }
 .navbar {
@@ -42,7 +42,7 @@ a:hover,#moon:hover {
 /* تنسيق قسم التخصصات */
 .Specialties {
   font-family: sans-serif; /* تحديد نوع الخط */
-  background: #d3bdaa; /* لون الخلفية */
+  background: beige; /* لون الخلفية */
   text-align: center; /* توسيط النص */
   padding: 20px; /* مساحة داخلية حول المحتوى */
 }
@@ -125,7 +125,7 @@ button:hover {
 
 /* صندوق كل منتج */
 .box {
-  background: #d9a4ac; /* لون الخلفية */
+  background: #ebcacf; /* لون الخلفية */
   border-radius: 10px; /* زوايا دائرية */
   padding: 1rem; /* حشو داخلي */
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* ظل خفيف */
