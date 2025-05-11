@@ -186,39 +186,3 @@ button:hover {
 .favorite-icon.active {
   color: red; /* لون أحمر */
 }
-
-/* حاوية النص المتحرك */
-.typing-container {
-  font-family: 'Courier New', monospace; /* خط آلة كاتبة */
-  font-size: 2rem; /* حجم الخط */
-  color: #fff; /* لون النص */
-  background: linear-gradient(135deg, #ff6ec4, #7d97c0); /* تدرج لوني للخلفية */
-  padding: 20px 30px; /* حشو داخلي */
-  border-radius: 15px; /* زوايا دائرية */
-  display: inline-block; /* عرض بمقاس المحتوى */
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2); /* ظل كبير */
-  overflow: hidden; /* إخفاء الزائد */
-  border-left: 5px solid #fff; /* خط أبيض على اليسار */
-  animation: slide-in 1s ease forwards; /* تنفيذ حركة دخول */
-  margin: 20px; /* هامش خارجي */
-}
-
-/* حركة الدخول للنص */
-@keyframes slide-in {
-  from {
-    transform: translateX(-50%); /* البداية من خارج اليسار */
-    opacity: 0; /* شفاف */
-  }
-  to {
-    transform: translateX(0); /* في مكانه الطبيعي */
-    opacity: 1; /* مرئي بالكامل */
-  }
-}
-
-/* تأثير الكتابة – المؤشر */
-.typing-text::after {
-  content: '|'; /* إضافة المؤشر */
-  animation: blink 0.7s infinite; /* وميض متكرر */
-  color: #fff; /* لون أبيض */
-  margin-left: 5px; /* مسافة من النص */
-}
